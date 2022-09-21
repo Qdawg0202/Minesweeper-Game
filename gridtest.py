@@ -1,0 +1,43 @@
+import turtle
+
+sc = turtle.Screen()
+grid = turtle.Turtle()
+sc.setworldcoordinates(0,0,90,90)
+grid.speed(0)
+grid.down()
+grid.goto(0,90)
+grid.goto(90,90)
+grid.goto(90,0)
+grid.goto(0,0)
+
+for x in range(1,10):
+    grid.forward(5)
+    grid.write(str(x))
+    grid.forward(5)
+    grid.setheading(90)
+    grid.down()
+    grid.forward(90)
+    grid.up()
+    grid.setheading(270)
+    grid.forward(90)
+    grid.setheading(0)
+
+grid.up()
+grid.goto(-1,0)
+grid.setheading(90)
+for y in range(1,10):
+    grid.forward(5)
+    grid.write(str(y))
+    grid.forward(5)
+    grid.setheading(0)
+    grid.down()
+    grid.forward(90)
+    grid.up()
+    grid.setheading(180)
+    grid.forward(90)
+    grid.setheading(90)
+    
+grid.up()
+grid.goto(85,85)
+grid.down()
+grid.write("X")
